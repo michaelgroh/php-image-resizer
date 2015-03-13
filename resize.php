@@ -112,7 +112,7 @@ try {
 	exec($command, $commandOutput, $retval);
 
 	if ($retval !== 0) {
-		throw new Exception('Resized command failed');
+		throw new Exception('Resized command failed. Check for permission problems or an old version of convert.');
 	}
 	$contentType = 'image/' . ($source['extension'] == 'jpg' ? 'jpeg' : $source['extension']);
 	// If we don't send an Expires header some (all?) browsers will immediately
