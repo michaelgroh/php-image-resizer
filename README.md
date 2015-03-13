@@ -26,9 +26,11 @@ Notes:
 1. Place resize.php in to your web root.
 2. Add the following to your web config:
 
-	RewriteCond %{DOCUMENT_ROOT}/cache%{REQUEST_URI} -f
-	RewriteRule .* /cache%{REQUEST_URI} [L]
+	RewriteCond %{DOCUMENT_ROOT}/cache%{REQUEST_URI} -f  
+	RewriteRule .* /cache%{REQUEST_URI} [L]  
 	RewriteRule ^(.*)/([0-9]{1,4})(h|w|sqp|sqc)(/.*\.(jpg|png))$ /resize.php?size=$2&method=$3 [L]
+
+**Please Note: I did not test the web config in an .htaccess file. I added this directly to the web site config.**
     
 ## Usage
 
