@@ -24,13 +24,14 @@ Notes:
 ## Install
 
 1. Place resize.php in to your web root.
-2. Add the following to your web config:
+2. Add the following to your web config (**do not use .htaccess**, see note below):
 
 	RewriteCond %{DOCUMENT_ROOT}/cache%{REQUEST_URI} -f  
 	RewriteRule .* /cache%{REQUEST_URI} [L]  
+	RewriteCond %{REQUEST_URI} !^/cache/  
 	RewriteRule ^(.*)/([0-9]{1,4})(h|w|sqp|sqc)(/.*\.(jpg|png))$ /resize.php?size=$2&method=$3 [L]
 
-**Please Note: I did not test the web config in an .htaccess file. I added this directly to the web site config.**
+Please Note: I tried to make this project compatible with .htaccess files but ran in to a wall with the rewrite. I don't need this feature myself so I moved on to other things.
     
 ## Usage
 
