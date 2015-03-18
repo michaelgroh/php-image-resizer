@@ -27,10 +27,10 @@ try {
 			$command = 'convert %1$s -resize x%5$s %6$s %4$s';
 			break;
 		case 'sqp':  // Squarepad: Size longest edge to $size and pad the shorter edge to make a square.
-			$command = 'convert -define %8$s:size=%2$sx%3$s %1$s -thumbnail \'%5$sx%5$s>\' -background %7$s -gravity center -extent %5$sx%5$s %6$s %4$s';
+			$command = 'convert %1$s -strip -resize \'%5$sx%5$s\' -background %7$s -gravity center -extent %5$sx%5$s %6$s %4$s';
 			break;
 		case 'sqc':   // Squarecrop: Size shortest edge to $size and crop the long edge to a square.
-			$command = 'convert -define %8$s:size=%2$sx%3$s %1$s -thumbnail \'%5$sx%5$s^\' -gravity center -extent %5$sx%5$s %6$s %4$s';
+			$command = 'convert %1$s -strip -trim -resize \'%5$sx%5$s^\' -gravity center -extent %5$sx%5$s %6$s %4$s';
 			break;
 		default:
 			if (headers_sent()) {
