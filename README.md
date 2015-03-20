@@ -49,35 +49,13 @@ Example URLs:
 * /graphics/landscape.jpg (200 x 100)
 * /graphics/portrait.jpg (100 x 200)
 
-### To resize based on width:
+Example Resized URLs:
 
-Resize URL: /graphics/100w/landscape.jpg  
-Result: JPEG Image, 100 x 50
-
-Resize URL: /graphics/50w/portrait.jpg  
-Result: JPEG Image, 50 x 100
-
-### To resize based on width:
-
-Resize URL: /graphics/50h/landscape.jpg   
-Result: JPEG Image, 100 x 50
-
-Resize URL: /graphics/50h/portrait.jpg  
-Result: JPEG Image, 25 x 50
-
-### Square with padding:
-
-Resize URL: /graphics/75sqp/landscape.jpg  
-Result: JPEG Image, 75 x 75 with padding on top and bottom
-
-Resize URL: /graphics/75sqp/portrait.jpg  
-Result: JPEG Image, 75 x 75 with padding on left and right
-
-### Square with a  crop:
-
-Resize URL: /graphics/75sqc/landscape.jpg  
-Result: JPEG Image, 75 x 75 left and right sides cropped
-
-Resize URL: /graphics/75sqc/portrait.jpg  
-Result: JPEG Image, 75 x 75 top and bottom cropped
-
+* /graphics/100w/landscape.jpg (Result: JPEG Image, 100 x 50)
+* /graphics/50w/portrait.jpg (Result: JPEG Image, 50 x 100)
+* /graphics/50h/landscape.jpg (Result: JPEG Image, 100 x 50)
+* /graphics/50h/portrait.jpg (Result: JPEG Image, 25 x 50)
+* /graphics/75sqp/landscape.jpg (Result: JPEG Image, 75 x 75 with padding on top and bottom)
+* /graphics/75sqp/portrait.jpg (Result: JPEG Image, 75 x 75 with padding on left and right)
+* /graphics/75sqc/landscape.jpg (Result: JPEG Image, 75 x 75 left and right sides cropped)
+* /graphics/75sqc/portrait.jpg (Result: JPEG Image, 75 x 75 top and bottom cropped)
