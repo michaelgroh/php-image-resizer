@@ -21,16 +21,16 @@ try {
 	// Make sure we have a valid resize method and choose our resize command.
 	switch($method) {
 		case 'w': // Width: Size proportionately to a height of $size
-			$command = 'convert %1$s -trim -resize %5$s %6$s %4$s';
+			$command = 'convert %1$s -resize %5$s %6$s %4$s';
 			break;
 		case 'h': // Height: Size proportionately to a height of $size
-			$command = 'convert %1$s -trim -resize x%5$s %6$s %4$s';
+			$command = 'convert %1$s -resize x%5$s %6$s %4$s';
 			break;
 		case 'sqp':  // Squarepad: Size longest edge to $size and pad the shorter edge to make a square.
 			$command = 'convert %1$s -strip -resize \'%5$sx%5$s\' -background %7$s -gravity center -extent %5$sx%5$s %6$s %4$s';
 			break;
 		case 'sqc':   // Squarecrop: Size shortest edge to $size and crop the long edge to a square.
-			$command = 'convert %1$s -strip -trim -resize \'%5$sx%5$s^\' -gravity center -extent %5$sx%5$s %6$s %4$s';
+			$command = 'convert %1$s -strip -resize \'%5$sx%5$s^\' -gravity center -extent %5$sx%5$s %6$s %4$s';
 			break;
 		default:
 			if (headers_sent()) {
